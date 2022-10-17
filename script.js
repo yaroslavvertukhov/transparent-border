@@ -72,14 +72,14 @@ class BlocksBorder {
         this.ctx.fillStyle = this.getGradientBG();
         this.ctx.strokeStyle = this.getGradientBorder();
 
-        this.paintRoundRect(0, 0, this.canvas.width, this.canvas.height, this.options.radius);
+        this.paintRoundRect(1, 1, this.canvas.width - 1, this.canvas.height - 1, this.options.radius);
 
         requestAnimationFrame(() => this.tick());
     }
 
     updateSizeCanvas() {
-        this.canvas.width = this.parent.getBoundingClientRect().width;
-        this.canvas.height = this.parent.getBoundingClientRect().height;
+        this.canvas.width = Math.round(this.parent.getBoundingClientRect().width);
+        this.canvas.height = Math.round(this.parent.getBoundingClientRect().height);
     }
 
     addHandlers() {
