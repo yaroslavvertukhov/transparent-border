@@ -1,0 +1,11 @@
+.blocks {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: calc(33.33% - 15px);
+    height: 200px;
+    /*background-color: aqua;*/
+}
