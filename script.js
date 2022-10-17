@@ -68,6 +68,7 @@ class BlocksBorder {
     }
 
     tick() {
+        this.updateSizeCanvas();
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.ctx.fillStyle = this.getGradientBG();
         this.ctx.strokeStyle = this.getGradientBorder();
@@ -95,7 +96,6 @@ class BlocksBorder {
     }
 
     init() {
-        this.updateSizeCanvas();
         this.addHandlers();
         this.tick();
     }
