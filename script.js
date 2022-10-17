@@ -79,14 +79,14 @@ class BlocksBorder {
     }
 
     updateSizeCanvas() {
-        this.canvas.width = Math.round(this.parent.getBoundingClientRect().width);
-        this.canvas.height = Math.round(this.parent.getBoundingClientRect().height);
+        this.canvas.width = this.parent.getBoundingClientRect().width;
+        this.canvas.height = this.parent.getBoundingClientRect().height;
     }
 
     addHandlers() {
-        window.addEventListener('resize', () => {
-            this.updateSizeCanvas();
-        });
+        // window.addEventListener('resize', () => {
+        //     this.updateSizeCanvas();
+        // });
         this.parent.addEventListener('mouseover', () => {
             this.isHover = true;
         })
@@ -96,6 +96,7 @@ class BlocksBorder {
     }
 
     init() {
+        this.canvas.style.display = 'block';
         this.addHandlers();
         this.tick();
     }
