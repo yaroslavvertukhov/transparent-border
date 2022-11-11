@@ -79,8 +79,8 @@ class BlocksBorder {
     }
 
     updateSizeCanvas() {
-        this.canvas.width = this.parent.getBoundingClientRect().width;
-        this.canvas.height = this.parent.getBoundingClientRect().height;
+        this.canvas.width = this.parent.clientWidth;
+        this.canvas.height = this.parent.offsetHeight;
     }
 
     addHandlers() {
